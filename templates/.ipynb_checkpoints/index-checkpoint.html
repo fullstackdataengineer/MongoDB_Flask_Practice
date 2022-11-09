@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SpaceX!</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<h1 class='rainbow-text'>Every SpaceX Mission</h1>
+	<svg width="800" height="200">
+    	<defs>
+			<pattern id="background" patternUnits="userSpaceOnUse" x="0" y="0" width="800" height="200">
+				<image xlink:href="{{url_for('static', filename='img/background_fit.png')}}" width="800" height="200"/>
+			</pattern>
+		</defs>
+		<path d="M0,0 l0,200 l800,0 l0,-200 l-800,0" fill="url(#background)" />
+	</svg>
+	<script src="{{ url_for('static', filename='js/chart.js') }}"></script>
+</body>
+</html>

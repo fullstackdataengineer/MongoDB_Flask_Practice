@@ -8,6 +8,7 @@ port=os.environ.get("port")
 database=os.environ.get("database")
 username=os.environ.get("username")
 password=os.environ.get("password")
+flaskport=os.environ.get("flaskport")
 authentication_database='admin'
 
 client = pymongo.MongoClient('mongodb://{username}:{password}@{host}:{port}/{authentication_database}?retryWrites=true&w=majority'.format(
@@ -43,4 +44,4 @@ def all_launches_timeline():
     return jsonify(list(results))
 
 if __name__=='__main__': 
-    app.run()
+    app.run(port=flaskport)

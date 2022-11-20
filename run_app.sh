@@ -2,4 +2,4 @@
 
 source environment.conf
 
-python app_basic.py
+python3 app_basic.py

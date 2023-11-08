@@ -44,4 +44,4 @@ def all_launches_timeline():
     return jsonify(list(results))
 
 if __name__=='__main__': 
-    app.run(port=flaskport)
+    app.run(host="0.0.0.0", port=flaskport)
